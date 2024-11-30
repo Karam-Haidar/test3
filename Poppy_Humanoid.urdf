@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Poppy_Humanoid">
+  <link
+    name="pelvis">
+    <inertial>
+      <origin
+        xyz="-0.000182673739714418 0.00155106487837645 0.000250000234069814"
+        rpy="0 0 0" />
+      <mass
+        value="0.185914892869111" />
+      <inertia
+        ixx="8.32806339991229E-05"
+        ixy="-7.59692647482749E-06"
+        ixz="3.43586517476102E-09"
+        iyy="4.94037348076893E-05"
+        iyz="-2.91713589838576E-06"
+        izz="8.60688415180713E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/pelvis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/pelvis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r_hip">
+    <inertial>
+      <origin
+        xyz="-0.041964776542216 0.0190498540999391 -0.00489206040339155"
+        rpy="0 0 0" />
+      <mass
+        value="0.0846246648821324" />
+      <inertia
+        ixx="2.55351583272241E-05"
+        ixy="1.72351468064852E-07"
+        ixz="8.8514173240287E-07"
+        iyy="2.45840967279166E-05"
+        iyz="2.83096328264019E-07"
+        izz="1.76714759671868E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_x"
+    type="continuous">
+    <origin
+      xyz="-0.022542 0 0"
+      rpy="1.5708 -0.023715 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="r_hip" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_hip_motor">
+    <inertial>
+      <origin
+        xyz="0.000109947822346662 -0.0232479247460417 -0.0143205703484508"
+        rpy="0 0 0" />
+      <mass
+        value="0.139059604743432" />
+      <inertia
+        ixx="4.46493944169366E-05"
+        ixy="-1.17597837528885E-12"
+        ixz="5.1457236755553E-07"
+        iyy="5.2404702390709E-05"
+        iyz="2.7482750146531E-09"
+        izz="2.97534383204201E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_hip_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_hip_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_z"
+    type="continuous">
+    <origin
+      xyz="-0.043999 0 0.005"
+      rpy="0 -0.044101 0" />
+    <parent
+      link="r_hip" />
+    <child
+      link="r_hip_motor" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_thigh">
+    <inertial>
+      <origin
+        xyz="-4.85546752001798E-05 -0.142940863185127 0.00161304353481877"
+        rpy="0 0 0" />
+      <mass
+        value="0.117090824417578" />
+      <inertia
+        ixx="0.000149417237809549"
+        ixy="-2.9615187146168E-07"
+        ixz="2.64082534981482E-09"
+        iyy="4.1393197264348E-05"
+        iyz="1.12759306102231E-05"
+        izz="0.000151523990233305" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.024000000000001 0"
+      rpy="-0.0654809290674927 0 0" />
+    <parent
+      link="r_hip_motor" />
+    <child
+      link="r_thigh" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="r_shin">
+    <inertial>
+      <origin
+        xyz="-0.00139035559058887 -0.139920290782115 5.03051603550492E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.110784895046905" />
+      <inertia
+        ixx="0.000140479944518955"
+        ixy="4.96421445084122E-06"
+        ixz="1.82633898388696E-09"
+        iyy="3.43543096369098E-05"
+        iyz="3.07779201226862E-07"
+        izz="0.000138042387894843" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_knee_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.182 0"
+      rpy="-1.57079632679487 1.544754172667 -1.57079632679487" />
+    <parent
+      link="r_thigh" />
+    <child
+      link="r_shin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_foot">
+    <inertial>
+      <origin
+        xyz="-0.00242721348024059 -0.0233556655681074 0.0268820128500432"
+        rpy="0 0 0" />
+      <mass
+        value="0.0467396305777624" />
+      <inertia
+        ixx="8.13655442785262E-05"
+        ixy="-1.76501924950925E-07"
+        ixz="2.41240489631906E-06"
+        iyy="8.85716799745483E-05"
+        iyz="3.20710729117421E-06"
+        izz="1.79032798228047E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ankle_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.18 0"
+      rpy="0.820889590068429 -1.57079631189374 -0.719479139420092" />
+    <parent
+      link="r_shin" />
+    <child
+      link="r_foot" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_hip">
+    <inertial>
+      <origin
+        xyz="0.0419588683478139 0.0190472099707547 -0.00488821387952639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0846364163317082" />
+      <inertia
+        ixx="2.55415838457327E-05"
+        ixy="-1.76489184090987E-07"
+        ixz="-8.79211529479094E-07"
+        iyy="2.45971459482072E-05"
+        iyz="2.85947710152017E-07"
+        izz="1.76827995103566E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_x"
+    type="continuous">
+    <origin
+      xyz="0.0225417390633466 0 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="l_hip" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_hip_motor">
+    <inertial>
+      <origin
+        xyz="-0.000109947844566832 -0.0232479240597816 -0.0143205703730398"
+        rpy="0 0 0" />
+      <mass
+        value="0.139059605355699" />
+      <inertia
+        ixx="4.46493946800906E-05"
+        ixy="-1.18357603225403E-12"
+        ixz="-5.14572392769494E-07"
+        iyy="5.24047026280284E-05"
+        iyz="2.74365211316976E-09"
+        izz="2.97534383829136E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_hip_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_hip_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_z"
+    type="continuous">
+    <origin
+      xyz="0.0439986111539756 0 0.00499999999999817"
+      rpy="0 0.12300371754066 0" />
+    <parent
+      link="l_hip" />
+    <child
+      link="l_hip_motor" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_thigh">
+    <inertial>
+      <origin
+        xyz="-0.000253143367679648 -0.142941764746423 0.00161242178317134"
+        rpy="0 0 0" />
+      <mass
+        value="0.117090454170724" />
+      <inertia
+        ixx="0.000149420417490303"
+        ixy="3.12823084652693E-07"
+        ixz="2.70070116987997E-09"
+        iyy="4.13919855686854E-05"
+        iyz="1.12745163017725E-05"
+        izz="0.000151530863840472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.0240000000000002 0"
+      rpy="-0.0397561965411015 0 0" />
+    <parent
+      link="l_hip_motor" />
+    <child
+      link="l_thigh" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_shin">
+    <inertial>
+      <origin
+        xyz="-0.00139051978430264 -0.139916504246731 -0.000353128648782744"
+        rpy="0 0 0" />
+      <mass
+        value="0.110769292574838" />
+      <inertia
+        ixx="0.000140472060809585"
+        ixy="4.96395263819689E-06"
+        ixz="1.39496170488084E-09"
+        iyy="3.43548651025464E-05"
+        iyz="-3.00892682837703E-07"
+        izz="0.000138034020570493" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_knee_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.182 0"
+      rpy="1.57079632679487 1.51589948598406 1.57079632679487" />
+    <parent
+      link="l_thigh" />
+    <child
+      link="l_shin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_foot">
+    <inertial>
+      <origin
+        xyz="0.00213213061471686 -0.0233396988808524 0.0268636941753942"
+        rpy="0 0 0" />
+      <mass
+        value="0.0467790639866005" />
+      <inertia
+        ixx="8.14030741542412E-05"
+        ixy="1.76744351428458E-07"
+        ixz="-2.41807263681323E-06"
+        iyy="8.85969917655573E-05"
+        iyz="3.21556772110656E-06"
+        izz="1.79238545840962E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ankle_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.18 0"
+      rpy="-0.0128652815618684 -1.57079631189374 -0.00223213914996515" />
+    <parent
+      link="l_shin" />
+    <child
+      link="l_foot" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="abs_motors">
+    <inertial>
+      <origin
+        xyz="-5.48350659475258E-05 0.0142278112536821 -0.0200481491620194"
+        rpy="0 0 0" />
+      <mass
+        value="0.278825904694366" />
+      <inertia
+        ixx="9.61566860452644E-05"
+        ixy="5.14577473137665E-07"
+        ixz="-2.52649571396667E-13"
+        iyy="5.88468196573007E-05"
+        iyz="-5.13861076616456E-07"
+        izz="9.69453116287197E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/abs_motors.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/abs_motors.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="abs_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.017 0.061"
+      rpy="1.51713961112434 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="abs_motors" />
+    <axis
+      xyz="-0.999972184193155 0.00745860844738909 0" />
+  </joint>
+  <link
+    name="abdomen">
+    <inertial>
+      <origin
+        xyz="-3.41781914026638E-07 0.0444051064388236 -0.0231726269447551"
+        rpy="0 0 0" />
+      <mass
+        value="0.0379602798003174" />
+      <inertia
+        ixx="6.09515138512281E-05"
+        ixy="-1.92962621256873E-11"
+        ixz="-3.3075051472433E-09"
+        iyy="6.12684651797849E-05"
+        iyz="-3.90177668954189E-07"
+        izz="2.39613019953646E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/abdomen.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/abdomen.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="abs_x"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.0074587" />
+    <parent
+      link="abs_motors" />
+    <child
+      link="abdomen" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="spine">
+    <inertial>
+      <origin
+        xyz="-1.84473260871542E-07 0.0289345674635189 -0.0100888036775833"
+        rpy="0 0 0" />
+      <mass
+        value="0.0929446390226476" />
+      <inertia
+        ixx="3.19375575516805E-05"
+        ixy="7.06563414592741E-11"
+        ixz="1.89326063928165E-10"
+        iyy="2.67683783572167E-05"
+        iyz="-6.45882209523109E-07"
+        izz="2.68212767280831E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/spine.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/spine.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="abs_z"
+    type="continuous">
+    <origin
+      xyz="0 0.0515349232274412 0"
+      rpy="0 0.038996312540617 0" />
+    <parent
+      link="abdomen" />
+    <child
+      link="spine" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="bust_motors">
+    <inertial>
+      <origin
+        xyz="3.50038584103389E-05 0.010505742917999 -0.0173736602251411"
+        rpy="0 0 0" />
+      <mass
+        value="0.159259714956598" />
+      <inertia
+        ixx="3.82044671893239E-05"
+        ixy="3.04090508148051E-07"
+        ixz="-1.86041730229316E-12"
+        iyy="2.55920673355131E-05"
+        iyz="-3.01366421786436E-07"
+        izz="3.85276728402881E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/bust_motors.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/bust_motors.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bust_y"
+    type="continuous">
+    <origin
+      xyz="0 0.0799525509774566 0.00280000000000001"
+      rpy="0.0536951329733316 0 0" />
+    <parent
+      link="spine" />
+    <child
+      link="bust_motors" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="chest">
+    <inertial>
+      <origin
+        xyz="6.52744026775182E-06 0.0514802357214017 -0.00960210074458947"
+        rpy="0 0 0" />
+      <mass
+        value="0.270928891107039" />
+      <inertia
+        ixx="0.000128480630138179"
+        ixy="1.17510782294165E-08"
+        ixz="2.49869563877669E-08"
+        iyy="0.000217429214728421"
+        iyz="-6.28981349825238E-06"
+        izz="0.000160505508410875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/chest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/chest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bust_x"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.00957078732054358" />
+    <parent
+      link="bust_motors" />
+    <child
+      link="chest" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="neck">
+    <inertial>
+      <origin
+        xyz="-0.000947044147532484 0.00898373633235444 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00592634977544091" />
+      <inertia
+        ixx="7.60507933479521E-07"
+        ixy="6.18800745586376E-08"
+        ixz="7.87475943150482E-22"
+        iyy="2.411476250881E-06"
+        iyz="-7.77549775799846E-23"
+        izz="2.64637566125347E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/neck.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/neck.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_z"
+    type="continuous">
+    <origin
+      xyz="0 0.0839908898414324 0.00499999999999995"
+      rpy="0 -0.150651615663017 0" />
+    <parent
+      link="chest" />
+    <child
+      link="neck" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="0.000316260741590431 0.0274540292981018 -0.0143080126634857"
+        rpy="0 0 0" />
+      <mass
+        value="0.163300049904492" />
+      <inertia
+        ixx="0.000174684950617698"
+        ixy="-2.6352692747648E-07"
+        ixz="5.8533823985754E-07"
+        iyy="0.00023211150652244"
+        iyz="3.03974025679324E-05"
+        izz="0.000306840135076542" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_y"
+    type="continuous">
+    <origin
+      xyz="0 0.0200091101585678 0"
+      rpy="-0.257122277257672 0 0" />
+    <parent
+      link="neck" />
+    <child
+      link="head" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_shoulder">
+    <inertial>
+      <origin
+        xyz="0.00864523003367736 0.00140277930983301 -0.00905486918336045"
+        rpy="0 0 0" />
+      <mass
+        value="0.00896396525678935" />
+      <inertia
+        ixx="3.66197072307527E-06"
+        ixy="2.3644502985848E-08"
+        ixz="-3.19853637868992E-08"
+        iyy="3.69450208015046E-06"
+        iyz="-6.97061422548079E-09"
+        izz="2.09796395974385E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_shoulder_y"
+    type="continuous">
+    <origin
+      xyz="0.0785588930792943 0.0499999999999995 0.00399999999999989"
+      rpy="0.0226593678827122 0 0" />
+    <parent
+      link="chest" />
+    <child
+      link="l_shoulder" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_shoulder_motor">
+    <inertial>
+      <origin
+        xyz="6.62335022993954E-07 -0.0129499194279119 -0.00858252029079602"
+        rpy="0 0 0" />
+      <mass
+        value="0.0838780171424037" />
+      <inertia
+        ixx="2.18198071767779E-05"
+        ixy="-4.72309999135834E-10"
+        ixz="1.07522264084494E-09"
+        iyy="1.50600025408577E-05"
+        iyz="-2.99144629871921E-07"
+        izz="1.87673842314372E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shoulder_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_shoulder_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_shoulder_x"
+    type="continuous">
+    <origin
+      xyz="0.0269411069207058 0 0"
+      rpy="0 0 1.56874719947428" />
+    <parent
+      link="l_shoulder" />
+    <child
+      link="l_shoulder_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="upper_arm">
+    <inertial>
+      <origin
+        xyz="3.33272045042752E-05 -0.0626072551827437 0.0106229399797933"
+        rpy="0 0 0" />
+      <mass
+        value="0.16737477111552" />
+      <inertia
+        ixx="5.92643504021223E-05"
+        ixy="3.04797808199423E-07"
+        ixz="2.21557104727228E-10"
+        iyy="3.95086181957679E-05"
+        iyz="-4.26864917429247E-07"
+        izz="5.30046037273707E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/upper_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/upper_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_z"
+    type="continuous">
+    <origin
+      xyz="0 -0.0374405904973501 -0.0185000000000006"
+      rpy="3.14159265358979 1.5546131469944 3.14159265358979" />
+    <parent
+      link="l_shoulder_motor" />
+    <child
+      link="upper_arm" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_forearm">
+    <inertial>
+      <origin
+        xyz="0.00689723447978666 -0.108296854960403 -0.00483977041181713"
+        rpy="0 0 0" />
+      <mass
+        value="0.0473263583577053" />
+      <inertia
+        ixx="6.00337053784709E-05"
+        ixy="2.75013030542932E-06"
+        ixz="3.55413579215153E-07"
+        iyy="1.37921260237243E-05"
+        iyz="3.74074558271403E-06"
+        izz="5.74557314807049E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/l_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_elbow_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.111559409502652 0.0100000000000002"
+      rpy="-0.121325187109238 0 0" />
+    <parent
+      link="upper_arm" />
+    <child
+      link="l_forearm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="r_shoulder">
+    <inertial>
+      <origin
+        xyz="-0.00864774202802029 0.00140286675566095 -0.00905451690979794"
+        rpy="0 0 0" />
+      <mass
+        value="0.00896474372459065" />
+      <inertia
+        ixx="3.66212894061893E-06"
+        ixy="-2.38203892850203E-08"
+        ixz="3.20072630001393E-08"
+        iyy="3.69457381923916E-06"
+        iyz="-6.97614586584587E-09"
+        izz="2.09801521172538E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_shoulder_y"
+    type="continuous">
+    <origin
+      xyz="-0.0785571680205247 0.0499999999999997 0.00399999999999994"
+      rpy="-1.57193529946344 0 0" />
+    <parent
+      link="chest" />
+    <child
+      link="r_shoulder" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_shoulder_motor">
+    <inertial>
+      <origin
+        xyz="6.62286845615201E-07 -0.0129499197071435 -0.00858252081189093"
+        rpy="0 0 0" />
+      <mass
+        value="0.083878021443538" />
+      <inertia
+        ixx="2.18198081054197E-05"
+        ixy="-4.72237930656161E-10"
+        ixz="1.07512540787159E-09"
+        iyy="1.50600033587679E-05"
+        iyz="-2.99144835447111E-07"
+        izz="1.87673852016955E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shoulder_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_shoulder_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_shoulder_x"
+    type="continuous">
+    <origin
+      xyz="-0.0269428319794755 0 0"
+      rpy="0 0 -1.59140124693212" />
+    <parent
+      link="r_shoulder" />
+    <child
+      link="r_shoulder_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_upper_arm">
+    <inertial>
+      <origin
+        xyz="-3.32642151916057E-05 -0.0627602501094768 0.0106229547673878"
+        rpy="0 0 0" />
+      <mass
+        value="0.167374630609768" />
+      <inertia
+        ixx="5.92642416393519E-05"
+        ixy="-3.03314173319744E-07"
+        ixz="2.52095363649874E-10"
+        iyy="3.95085487691584E-05"
+        iyz="-4.2682223257179E-07"
+        izz="5.30045162406606E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_upper_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_upper_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_z"
+    type="continuous">
+    <origin
+      xyz="0 -0.0372875842562274 -0.0184999999999999"
+      rpy="0 -0.0424996253723622 0" />
+    <parent
+      link="r_shoulder_motor" />
+    <child
+      link="r_upper_arm" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_forearm">
+    <inertial>
+      <origin
+        xyz="-0.00736790974037366 -0.108296246465566 -0.00483982138922165"
+        rpy="0 0 0" />
+      <mass
+        value="0.0473276359144023" />
+      <inertia
+        ixx="6.00345079028228E-05"
+        ixy="-2.7503354979182E-06"
+        ixz="-3.55284363318217E-07"
+        iyy="1.37922936717591E-05"
+        iyz="3.74100391088275E-06"
+        izz="5.74565256249264E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Poppy_Humanoid/meshes/r_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_elbow_y"
+    type="continuous">
+    <origin
+      xyz="0 -0.111712415743772 0.0100000000000001"
+      rpy="-0.230458400586631 0 0" />
+    <parent
+      link="r_upper_arm" />
+    <child
+      link="r_forearm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
